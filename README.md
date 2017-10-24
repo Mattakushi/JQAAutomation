@@ -1,1 +1,3 @@
 # JQAAutomation
+
+Example of Autotest.
