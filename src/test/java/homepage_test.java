@@ -6,10 +6,9 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class authorization_test {
+public class homepage_test {
 
     WebDriver driver;
-    homepage homepage;
 
     @BeforeClass
     public void Setup() {
@@ -19,14 +18,10 @@ public class authorization_test {
     }
 
     @Test
-    public void loginTest() {
-        homepage = new homepage(driver);
+    public void FindFilm() {
+        homepage homepage = new homepage(driver);
         homepage.goUrl();
-        homepage.signInButton();
-        homepage.loginFied("Autotest");
-        homepage.passField("123456789");
-        homepage.loginButton();
-        homepage.logoutButton();
+        homepage.findFilm("Техасская резня бензопилой: Кожаное лицо (2017)");
     }
 
     @AfterClass
