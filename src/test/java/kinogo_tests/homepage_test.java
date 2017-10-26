@@ -1,14 +1,16 @@
+package kinogo_tests;
+
+import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 import page.homepage;
-import page.userpage;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class userpage_test {
+public class homepage_test {
 
     WebDriver driver;
 
@@ -17,25 +19,13 @@ public class userpage_test {
         System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+    }
+
+    @Test
+    public void FindFilm() {
         homepage homepage = new homepage(driver);
         homepage.goUrl();
-        homepage.signInButton();
-        homepage.loginFied("Autotest");
-        homepage.passField("123456789");
-        homepage.loginButton();
-        homepage.userPage();
-    }
-
-    @Test
-    public void UserpageTest() {
-        userpage userpage = new userpage(driver);
-        Assert.assertEquals(userpage.username(), "Autotest");
-    }
-
-    @Test
-    public void EditUser() {
-        userpage userpage = new userpage(driver);
-        userpage.editUserButton();
+        Assert.assertEquals(homepage.findFilm(), "Техасская резня бензопилой: Кожаное лицо (2017)");
     }
 
     @AfterClass

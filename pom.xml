@@ -9,12 +9,17 @@
   <version>1.0</version>
 
   <dependencies>
+
+    <!--<TestNG>-->
+
     <dependency>
       <groupId>org.testng</groupId>
       <artifactId>testng</artifactId>
-      <version>6.8</version>
-      <scope>test</scope>
+      <version>RELEASE</version>
     </dependency>
+
+    <!--<JUnit>-->
+
     <dependency>
       <groupId>org.junit.platform</groupId>
       <artifactId>junit-platform-launcher</artifactId>
@@ -33,16 +38,23 @@
       <version>4.12.1</version>
       <scope>test</scope>
     </dependency>
+
+    <!--<Selenium>-->
+
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-server</artifactId>
       <version>3.0.1</version>
     </dependency>
+
+    <!--<Yandex AShot>-->
+
     <dependency>
-      <groupId>org.testng</groupId>
-      <artifactId>testng</artifactId>
-      <version>RELEASE</version>
+      <groupId>ru.yandex.qatools.ashot</groupId>
+      <artifactId>ashot</artifactId>
+      <version>1.5.2</version>
     </dependency>
+
   </dependencies>
 
 </project>
