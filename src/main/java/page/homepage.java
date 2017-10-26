@@ -11,6 +11,27 @@ public class homepage {
 
     WebDriver driver;
 
+    @FindBy(linkText = "Вход")
+    private WebElement signInButton;
+
+    @FindBy(name = "login_name")
+    private WebElement loginField;
+
+    @FindBy(name = "login_password")
+    private WebElement passField;
+
+    @FindBy(xpath = "//button[@title='Войти']")
+    private WebElement loginButton;
+
+    @FindBy(linkText = "Выход")
+    private WebElement logoutButton;
+
+    @FindBy(id = "logbtn")
+    private WebElement userPage;
+
+    @FindBy(xpath = "//table[@class='menu']//td[2]")
+    private WebElement newFilmsPage;
+
     @FindBy(xpath = "//li[@class='visible_1'][4]//a")
     private WebElement findfilm;
 
@@ -25,42 +46,41 @@ public class homepage {
     }
 
     public homepage signInButton() {
-        driver.findElement(By.linkText("Вход")).click();
+        signInButton.click();
         return this;
     }
 
     public homepage loginFied(String loginName) {
-        driver.findElement(By.name("login_name")).sendKeys(loginName);
+        loginField.sendKeys(loginName);
         return this;
     }
 
     public homepage passField(String password) {
-        driver.findElement(By.name("login_password")).sendKeys(password);
+        passField.sendKeys(password);
         return this;
     }
 
     public homepage loginButton() {
-        driver.findElement(By.xpath("//button[@title='Войти']")).click();
+        loginButton.click();
         return this;
     }
 
     public homepage logoutButton() {
-        driver.findElement(By.linkText("Выход")).click();
+        logoutButton.click();
         return this;
     }
 
     public homepage userPage() {
-        driver.findElement(By.id("logbtn")).click();
+        userPage.click();
         return this;
     }
 
-    public homepage newfilmsPage() {
-        driver.findElement(By.xpath("//table[@class='menu']//td[2]")).click();
+    public homepage newFilmsPage() {
+        newFilmsPage.click();
         return this;
     }
 
-    public homepage findFilm(String title) {
-        Assert.assertEquals(findfilm.getAttribute("title"), title);
-        return this;
+    public String findFilm() {
+        return findfilm.getAttribute("title");
     }
 }

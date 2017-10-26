@@ -1,3 +1,5 @@
+import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 import page.homepage;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
@@ -21,7 +23,7 @@ public class homepage_test {
     public void FindFilm() {
         homepage homepage = new homepage(driver);
         homepage.goUrl();
-        homepage.findFilm("Техасская резня бензопилой: Кожаное лицо (2017)");
+        Assert.assertEquals(homepage.findFilm(), "Техасская резня бензопилой: Кожаное лицо (2017)");
     }
 
     @AfterClass

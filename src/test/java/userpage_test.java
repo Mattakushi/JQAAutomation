@@ -11,15 +11,13 @@ import org.testng.annotations.Test;
 public class userpage_test {
 
     WebDriver driver;
-    page.homepage homepage;
-    page.userpage userpage;
 
     @BeforeClass
     public void Setup() {
         System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        homepage = new homepage(driver);
+        homepage homepage = new homepage(driver);
         homepage.goUrl();
         homepage.signInButton();
         homepage.loginFied("Autotest");
@@ -30,13 +28,13 @@ public class userpage_test {
 
     @Test
     public void UserpageTest() {
-        userpage = new userpage(driver);
+        userpage userpage = new userpage(driver);
         Assert.assertEquals(userpage.username(), "Autotest");
     }
 
     @Test
     public void EditUser() {
-        userpage = new userpage(driver);
+        userpage userpage = new userpage(driver);
         userpage.editUserButton();
     }
 

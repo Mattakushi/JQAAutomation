@@ -11,8 +11,6 @@ public class newfilmspage_test {
 
     WebDriver driver;
 
-    newfilmspage newfilmspage = new newfilmspage(driver);
-
     @BeforeClass
     public void Setup() {
         System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
@@ -20,20 +18,20 @@ public class newfilmspage_test {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         homepage homepage = new homepage(driver);
         homepage.goUrl();
-        homepage.newfilmsPage();
+        homepage.newFilmsPage();
     }
 
     @Test
     public void printFilmName() {
-        newfilmspage newfilmspage = new newfilmspage(driver);
-        System.out.println(newfilmspage.findFilm());
+        newfilmspage newfilms = new newfilmspage(driver);
+        System.out.println(newfilms.findFilm());
     }
 
     @Test
     public void allFilmsFrom4Page() {
         newfilmspage newfilmspage = new newfilmspage(driver);
         newfilmspage.changePage();
-        newfilmspage.setAllNames();
+        System.out.println(newfilmspage.setAllNames());
     }
 
     @AfterClass

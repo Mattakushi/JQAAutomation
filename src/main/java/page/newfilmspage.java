@@ -16,14 +16,16 @@ public class newfilmspage {
     @FindBy(xpath = "//div[@class='bot-navigation']/a[3]")
     private WebElement changePage;
 
+    @FindBy(xpath = "//div[@class='shortstory']/div/h2/a")
+    private WebElement setAllNames;
+
     public newfilmspage(WebDriver driver) {
         PageFactory.initElements(driver, this);
         this.driver = driver;
     }
 
-    public newfilmspage findFilm(){
-        filmname.getText();
-        return this;
+    public String findFilm(){
+        return filmname.getText();
     }
 
     public newfilmspage changePage() {
@@ -34,7 +36,7 @@ public class newfilmspage {
     public newfilmspage setAllNames() {
         List<WebElement> elements = driver.findElements(By.xpath("//div[@class='shortstory']/div/h2/a"));
         for (WebElement names : elements) {
-            System.out.println(names.getText());
+            names.getText();
         }
         return this;
     }
