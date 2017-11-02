@@ -23,16 +23,17 @@ public class newfilmspage_test {
         homepage.newFilmsPage();
     }
 
-    @Test
-    public void printFilmName() {
-        newfilmspage newfilms = new newfilmspage(driver);
-        System.out.println(newfilms.findFilm());
-    }
+//    @Test
+//    public void printFilmName() {
+//        newfilmspage newfilms = new newfilmspage(driver);
+//        System.out.println(newfilms.findFilm());
+//    }
 
     @Test
     public void allFilmsFrom4Page() {
         newfilmspage newfilmspage = new newfilmspage(driver);
         newfilmspage.changePage();
+//        newfilmspage.setAllNames();
         System.out.println(newfilmspage.setAllNames());
     }
 

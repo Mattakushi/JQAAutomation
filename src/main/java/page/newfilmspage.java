@@ -1,7 +1,6 @@
 package page;
 import java.util.ArrayList;
 import java.util.List;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -18,7 +17,7 @@ public class newfilmspage {
     private WebElement changePage;
 
     @FindBy(xpath = "//div[@class='shortstory']/div/h2/a")
-    private List setAllNames;
+    private List<WebElement> setAllNames;
 
     public newfilmspage(WebDriver driver) {
         PageFactory.initElements(driver, this);
@@ -34,12 +33,12 @@ public class newfilmspage {
         return this;
     }
 
-    public newfilmspage setAllNames() {
-        List<WebElement> elements = setAllNames;
-        for (WebElement names : elements) {
-            names.getText();
+    public ArrayList<String> setAllNames() {
+        ArrayList<String> elements = new ArrayList<String>();
+        for (int x = 0; x < setAllNames.size(); x = x + 1) {
+            elements.add(setAllNames.get(x).getText());
         }
-        return this;
+        return elements;
     }
 
 }
