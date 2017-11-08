@@ -95,6 +95,14 @@
       <version>1.5.2</version>
     </dependency>
 
+    <!--<Java Mail>-->
+
+    <dependency>
+      <groupId>com.sun.mail</groupId>
+      <artifactId>javax.mail</artifactId>
+      <version>1.6.0</version>
+    </dependency>
+
   </dependencies>
 
 </project>
