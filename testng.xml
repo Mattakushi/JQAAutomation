@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="KinoGo">
+  <test name="positive">
+    <classes>
+      <class name="kinogo_tests.Authorization"/>
+      <class name="kinogo_tests.Homepage_test"/>
+      <class name="kinogo_tests.Userpage_test"/>
+      <class name="kinogo_tests.Newfilmspage_test"/>
+    </classes>
+  </test>
+  <test name="negative">
+    <classes>
+      <class name="kinogo_tests.NegativeAuth"/>
+    </classes>
+  </test>
+</suite>
