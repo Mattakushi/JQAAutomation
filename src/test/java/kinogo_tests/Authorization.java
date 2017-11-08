@@ -24,8 +24,8 @@ public class Authorization {
         Homepage Homepage = new Homepage(driver);
         Homepage.goUrl();
         Homepage.signInButton();
-        Homepage.loginFied("Autotest");
-        Homepage.passField("123456789");
+        Homepage.loginFied(System.getProperty("DOMAIN"));
+        Homepage.passField(System.getProperty("PASS"));
         Homepage.loginButton();
         Homepage.logoutButton();
     }
