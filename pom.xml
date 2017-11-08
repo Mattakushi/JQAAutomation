@@ -8,6 +8,13 @@
   <artifactId>JQAAutomation</artifactId>
   <version>1.0</version>
 
+  <properties>
+    <test.param>${env.LOGIN}</test.param>
+    <test.param>${env.PASS}</test.param>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+  </properties>
+
   <build>
     <plugins>
       <plugin>
@@ -31,13 +38,6 @@
       </plugin>
     </plugins>
   </build>
-
-  <properties>
-    <test.param>${env.LOGIN}</test.param>
-    <test.param>${env.PASS}</test.param>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-  </properties>
 
   <reporting>
     <plugins>
