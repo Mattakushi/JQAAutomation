@@ -1,3 +1,3 @@
-# JQAAutomation
+# jAutomation
 
-Example of Autotest.
+Maven+Java+Selenium+TestNG
