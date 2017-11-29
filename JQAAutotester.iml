@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
+  <component name="FacetManager">
+    <facet type="hibernate" name="Hibernate">
+      <configuration>
+        <datasource-map>
+          <unit-entry name="hibernate.cfg.xml" value="f765aa2b-955c-4522-8f1f-eab4339056bb" />
+        </datasource-map>
+        <naming-strategy-map />
+        <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/src/main/resources/hibernate.cfg.xml" />
+      </configuration>
+    </facet>
+  </component>
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_5">
     <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
     <content url="file://$MODULE_DIR$">
@@ -18,19 +29,14 @@
     <orderEntry type="library" scope="TEST" name="Maven: org.beanshell:bsh:2.0b4" level="project" />
     <orderEntry type="library" name="Maven: com.beust:jcommander:1.27" level="project" />
     <orderEntry type="library" name="Maven: org.yaml:snakeyaml:1.6" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: org.junit.platform:junit-platform-launcher:1.0.1" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: org.junit.platform:junit-platform-engine:1.0.1" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: org.junit.platform:junit-platform-commons:1.0.1" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: org.opentest4j:opentest4j:1.0.0" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: org.junit.jupiter:junit-jupiter-engine:5.0.1" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: org.junit.jupiter:junit-jupiter-api:5.0.1" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: org.junit.vintage:junit-vintage-engine:4.12.1" level="project" />
     <orderEntry type="library" name="Maven: org.seleniumhq.selenium:selenium-server:3.0.1" level="project" />
     <orderEntry type="library" name="Maven: org.seleniumhq.selenium:selenium-java:3.0.1" level="project" />
     <orderEntry type="library" name="Maven: org.seleniumhq.selenium:selenium-chrome-driver:3.0.1" level="project" />
     <orderEntry type="library" name="Maven: org.seleniumhq.selenium:selenium-remote-driver:3.0.1" level="project" />
     <orderEntry type="library" name="Maven: org.seleniumhq.selenium:selenium-api:3.0.1" level="project" />
+    <orderEntry type="library" name="Maven: cglib:cglib-nodep:3.2.4" level="project" />
     <orderEntry type="library" name="Maven: org.apache.commons:commons-exec:1.3" level="project" />
+    <orderEntry type="library" name="Maven: com.google.code.gson:gson:2.3.1" level="project" />
     <orderEntry type="library" name="Maven: com.google.guava:guava:19.0" level="project" />
     <orderEntry type="library" name="Maven: net.java.dev.jna:jna-platform:4.1.0" level="project" />
     <orderEntry type="library" name="Maven: net.java.dev.jna:jna:4.1.0" level="project" />
@@ -67,13 +73,5 @@
     <orderEntry type="library" name="Maven: org.seleniumhq.selenium:jetty-repacked:9.2.13.v20160825" level="project" />
     <orderEntry type="library" name="Maven: javax.servlet:javax.servlet-api:3.1.0" level="project" />
     <orderEntry type="library" name="Maven: org.seleniumhq.selenium:htmlunit-driver:2.23" level="project" />
-    <orderEntry type="library" name="Maven: ru.yandex.qatools.ashot:ashot:1.5.2" level="project" />
-    <orderEntry type="library" name="Maven: com.google.code.gson:gson:2.2.4" level="project" />
-    <orderEntry type="library" name="Maven: org.hamcrest:hamcrest-all:1.3" level="project" />
-    <orderEntry type="library" name="Maven: com.googlecode.lambdaj:lambdaj:2.3.3" level="project" />
-    <orderEntry type="library" name="Maven: org.objenesis:objenesis:1.2" level="project" />
-    <orderEntry type="library" name="Maven: cglib:cglib-nodep:2.2" level="project" />
-    <orderEntry type="library" name="Maven: com.sun.mail:javax.mail:1.6.0" level="project" />
-    <orderEntry type="library" name="Maven: javax.activation:activation:1.1" level="project" />
   </component>
 </module>

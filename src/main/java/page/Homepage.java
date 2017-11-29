@@ -3,7 +3,6 @@ package page;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
 public class Homepage {
 
@@ -21,6 +20,12 @@ public class Homepage {
     @FindBy(xpath = "//button[@title='Войти']")
     private WebElement loginButton;
 
+    @FindBy(id = "logbtn")
+    private WebElement loginedName;
+
+    @FindBy(xpath = "//div[@class='oformlenie']/h1")
+    private WebElement loginFailed;
+
     @FindBy(linkText = "Выход")
     private WebElement logoutButton;
 
@@ -34,12 +39,11 @@ public class Homepage {
     private WebElement findfilm;
 
     public Homepage(WebDriver driver) {
-        PageFactory.initElements(driver, this);
         this.driver = driver;
     }
 
     public Homepage goUrl() {
-        driver.get("http://kinogo.club");
+        driver.get("http://kinogo.cc");
         return this;
     }
 
@@ -61,6 +65,16 @@ public class Homepage {
     public Homepage loginButton() {
         loginButton.click();
         return this;
+    }
+
+    public String loginedName() {
+        String name = loginedName.getText();
+        return name;
+    }
+
+    public String loginFailed() {
+        String fail = loginFailed.getText();
+        return fail;
     }
 
     public Homepage logoutButton() {

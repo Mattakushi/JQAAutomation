@@ -1,5 +1,4 @@
-package kinogo_tests;
-
+import org.openqa.selenium.support.PageFactory;
 import page.Newfilmspage;
 import page.Homepage;
 import java.util.concurrent.TimeUnit;
@@ -12,33 +11,33 @@ import org.testng.annotations.Test;
 public class Newfilmspage_test {
 
     WebDriver driver;
+    static page.Homepage Homepage;
+    static page.Newfilmspage Newfilmspage;
 
     @BeforeClass
-    public void Setup() {
+    public void setup() {
         System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        Homepage Homepage = new Homepage(driver);
+        Homepage = PageFactory.initElements(driver, page.Homepage.class);
+        Newfilmspage = PageFactory.initElements(driver, page.Newfilmspage.class);
         Homepage.goUrl();
         Homepage.newFilmsPage();
     }
 
-    @Test
+    @Test(priority = 1)
     public void printFilmName() {
-        Newfilmspage newfilms = new Newfilmspage(driver);
-        System.out.println(newfilms.findFilm());
+        System.out.println(Newfilmspage.findFilm());
     }
 
-    @Test
+    @Test(priority = 2)
     public void allFilmsFrom4Page() {
-        Newfilmspage Newfilmspage = new Newfilmspage(driver);
         Newfilmspage.changePage();
-        Newfilmspage.setAllNames();
         System.out.println(Newfilmspage.setAllNames());
     }
 
     @AfterClass
-    public void Down() {
+    public void down() {
         driver.quit();
     }
 
