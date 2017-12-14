@@ -3,15 +3,14 @@
 <suite name="KinoGo">
   <test name="positive">
     <classes>
-      <class name="kinogo_tests.Authorization"/>
-      <class name="kinogo_tests.Homepage_test"/>
-      <class name="kinogo_tests.Userpage_test"/>
-      <class name="kinogo_tests.Newfilmspage_test"/>
+      <class name="Authorization"/>
+      <class name="Homepage_test"/>
+      <class name="Newfilmspage_test"/>
     </classes>
   </test>
   <test name="negative">
     <classes>
-      <class name="kinogo_tests.NegativeAuth"/>
+      <class name="NegativeAuth"/>
     </classes>
   </test>
 </suite>

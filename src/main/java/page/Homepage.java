@@ -1,12 +1,11 @@
 package page;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class Homepage {
 
-    WebDriver driver;
+    private WebDriver driver;
 
     @FindBy(linkText = "Вход")
     private WebElement signInButton;
@@ -29,9 +28,6 @@ public class Homepage {
     @FindBy(linkText = "Выход")
     private WebElement logoutButton;
 
-    @FindBy(id = "logbtn")
-    private WebElement userPage;
-
     @FindBy(xpath = "//table[@class='menu']//td[2]")
     private WebElement newFilmsPage;
 
@@ -47,24 +43,11 @@ public class Homepage {
         return this;
     }
 
-    public Homepage signInButton() {
+    public void logining(String loginName, String password) {
         signInButton.click();
-        return this;
-    }
-
-    public Homepage loginFied(String loginName) {
         loginField.sendKeys(loginName);
-        return this;
-    }
-
-    public Homepage passField(String password) {
         passField.sendKeys(password);
-        return this;
-    }
-
-    public Homepage loginButton() {
         loginButton.click();
-        return this;
     }
 
     public String loginedName() {
@@ -79,11 +62,6 @@ public class Homepage {
 
     public Homepage logoutButton() {
         logoutButton.click();
-        return this;
-    }
-
-    public Homepage userPage() {
-        userPage.click();
         return this;
     }
 

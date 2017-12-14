@@ -1,36 +1,28 @@
 import org.openqa.selenium.support.PageFactory;
-import page.Newfilmspage;
-import page.Homepage;
-import java.util.concurrent.TimeUnit;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class Newfilmspage_test {
+public class Newfilmspage_test extends Configuration {
 
-    WebDriver driver;
-    static page.Homepage Homepage;
-    static page.Newfilmspage Newfilmspage;
+    private page.Homepage Homepage;
+    private page.Newfilmspage Newfilmspage;
 
     @BeforeClass
     public void setup() {
-        System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
-        driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        runAndConfigDriver();
         Homepage = PageFactory.initElements(driver, page.Homepage.class);
         Newfilmspage = PageFactory.initElements(driver, page.Newfilmspage.class);
-        Homepage.goUrl();
-        Homepage.newFilmsPage();
+        Homepage.goUrl()
+                .newFilmsPage();
+    }
+
+    @Test
+    public void printFilmName() {
+        System.out.println(Newfilmspage.findFilmName());
     }
 
     @Test(priority = 1)
-    public void printFilmName() {
-        System.out.println(Newfilmspage.findFilm());
-    }
-
-    @Test(priority = 2)
     public void allFilmsFrom4Page() {
         Newfilmspage.changePage();
         System.out.println(Newfilmspage.setAllNames());
