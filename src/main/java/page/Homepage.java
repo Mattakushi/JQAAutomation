@@ -1,4 +1,5 @@
 package page;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -39,15 +40,16 @@ public class Homepage {
     }
 
     public Homepage goUrl() {
-        driver.get("http://kinogo.cc");
+        driver.get("http://kinogo.cc/");
         return this;
     }
 
-    public void logining(String loginName, String password) {
+    public Homepage logining(String loginName, String password) {
         signInButton.click();
         loginField.sendKeys(loginName);
         passField.sendKeys(password);
         loginButton.click();
+        return this;
     }
 
     public String loginedName() {
@@ -72,5 +74,9 @@ public class Homepage {
 
     public String findFilm() {
         return findfilm.getAttribute("title");
+    }
+
+    public WebElement getFindfilm() {
+        return findfilm;
     }
 }

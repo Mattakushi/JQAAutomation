@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 public class Homepage_test extends Configuration {
 
-    static page.Homepage Homepage;
+    private page.Homepage Homepage;
 
     @BeforeClass
     public void setup() {
@@ -16,7 +16,7 @@ public class Homepage_test extends Configuration {
     }
 
     @Test
-    public void FindFilm() {
+    public void findFilm() {
         Assert.assertEquals(Homepage.findFilm(), "Человек-паук: Возвращение домой (2017)");
     }
 

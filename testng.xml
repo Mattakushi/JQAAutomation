@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="KinoGo">
-  <test name="positive">
+  <test name="func">
     <classes>
-      <class name="Authorization"/>
       <class name="Homepage_test"/>
       <class name="Newfilmspage_test"/>
     </classes>
   </test>
-  <test name="negative">
+  <test name="auth">
     <classes>
-      <class name="NegativeAuth"/>
+      <class name="Authorization"/>
     </classes>
   </test>
 </suite>
+
+  <!-- mvn clean test -Dtestname='testname' -->
