@@ -29,9 +29,6 @@ public class Homepage {
     @FindBy(linkText = "Выход")
     private WebElement logoutButton;
 
-    @FindBy(xpath = "//table[@class='menu']//td[2]")
-    private WebElement newFilmsPage;
-
     @FindBy(xpath = "//li[@class='visible_1'][4]//a")
     private WebElement findfilm;
 
@@ -39,44 +36,31 @@ public class Homepage {
         this.driver = driver;
     }
 
-    public Homepage goUrl() {
+    public void goUrl() {
         driver.get("http://kinogo.cc/");
-        return this;
     }
 
-    public Homepage logining(String loginName, String password) {
+    public void logining(String loginName, String password) {
         signInButton.click();
         loginField.sendKeys(loginName);
         passField.sendKeys(password);
         loginButton.click();
-        return this;
     }
 
     public String loginedName() {
-        String name = loginedName.getText();
-        return name;
+        return loginedName.getText();
     }
 
     public String loginFailed() {
-        String fail = loginFailed.getText();
-        return fail;
+        return loginFailed.getText();
     }
 
-    public Homepage logoutButton() {
+    public void logoutButton() {
         logoutButton.click();
-        return this;
-    }
-
-    public Homepage newFilmsPage() {
-        newFilmsPage.click();
-        return this;
     }
 
     public String findFilm() {
         return findfilm.getAttribute("title");
     }
 
-    public WebElement getFindfilm() {
-        return findfilm;
-    }
 }

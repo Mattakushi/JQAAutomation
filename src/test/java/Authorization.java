@@ -41,7 +41,7 @@ public class Authorization extends Configuration {
 
     @DataProvider
     public Object[][] getData() throws FileNotFoundException {
-        JsonElement jsonData = new JsonParser().parse(new FileReader("src/test/test.json"));
+        JsonElement jsonData = new JsonParser().parse(new FileReader("src/test/resources/test.json"));
         JsonElement dataSet = jsonData.getAsJsonObject().get("dataSet");
         List<TestData> testData = new Gson().fromJson(dataSet, new TypeToken<List<TestData>>() {
         }.getType());
@@ -54,7 +54,7 @@ public class Authorization extends Configuration {
     }
 
     @Test(dataProvider = "getData")
-    public void loginTest(TestData data) {
+    public void negativeloginTest(TestData data) {
         Homepage.logining(data.getLogin(), data.getPass());
         Assert.assertEquals(Homepage.loginFailed(), "Ошибка авторизации");
     }

@@ -4,7 +4,6 @@
   <test name="func">
     <classes>
       <class name="Homepage_test"/>
-      <class name="Newfilmspage_test"/>
     </classes>
   </test>
   <test name="auth">
