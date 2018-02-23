@@ -1,4 +1,5 @@
 public class TestData {
+
     private String login;
     private String pass;
 
@@ -18,7 +19,6 @@ public class TestData {
         this.pass = pass;
     }
 
-    @Override
     public String toString() {
         return "TestData{" +
                 "login='" + login + '\'' +

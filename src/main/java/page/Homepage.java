@@ -4,9 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class Homepage {
-
-    private WebDriver driver;
+public class Homepage extends BaseObject {
 
     @FindBy(linkText = "Вход")
     private WebElement signInButton;
@@ -33,7 +31,7 @@ public class Homepage {
     private WebElement findfilm;
 
     public Homepage(WebDriver driver) {
-        this.driver = driver;
+        super(driver);
     }
 
     public void goUrl() {

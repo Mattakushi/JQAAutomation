@@ -1,16 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
 <suite name="KinoGo">
+
+  <listeners>
+    <listener class-name="utils.TestMethodListener"/>
+  </listeners>
+
   <test name="func">
     <classes>
       <class name="Homepage_test"/>
     </classes>
   </test>
+
   <test name="auth">
     <classes>
       <class name="Authorization"/>
     </classes>
   </test>
+
+  <test name="verify">
+    <classes>
+      <class name="VerifyTests"/>
+    </classes>
+  </test>
+
 </suite>
 
   <!-- mvn clean test -Dtestname='testname' -->

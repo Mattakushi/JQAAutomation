@@ -2,17 +2,27 @@ import com.google.common.reflect.TypeToken;
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
+import io.github.bonigarcia.wdm.ChromeDriverManager;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+import page.BaseObject;
 
 public class Authorization extends Configuration {
+
+//    WebDriver driver;
+//    public Authorization(WebDriver driver) {
+//        super(driver);
+//    }
 
     private page.Homepage Homepage;
 
