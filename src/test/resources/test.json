@@ -1,0 +1,28 @@
+{
+  "dataSet": [
+    {
+      "login": "Autotest",
+      "pass": "!@#$%^&*("
+    },
+    {
+      "login": "Фгещеуые",
+      "pass": "123456789"
+    },
+    {
+      "login": "",
+      "pass": ""
+    },
+    {
+      "login": "root",
+      "pass": ""
+    },
+    {
+      "login": "Autоtest",
+      "pass": "qwertyuiopo[]asdfghjkl;''zxcvbnm,./asdfghjkl;'qwertyuiop[]zxcvbnm,./"
+    },
+    {
+      "login": "qwertyuiopo[]asdfghjkl;''zxcvbnm,./asdfghjkl;'qwertyuiop[]zxcvbnm,./",
+      "pass": "123456789"
+    }
+  ]
+}
