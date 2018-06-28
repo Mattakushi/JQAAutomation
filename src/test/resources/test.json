@@ -24,5 +24,23 @@
       "login": "qwertyuiopo[]asdfghjkl;''zxcvbnm,./asdfghjkl;'qwertyuiop[]zxcvbnm,./",
       "pass": "123456789"
     }
+  ],
+  "gsonPath": [
+    {
+      "key": "value1",
+      "arrayKey": [
+        "value1",
+        "value2",
+        "value3"
+      ]
+    },
+    {
+      "key": "value2",
+      "arrayKey": [
+        "value4",
+        "value5",
+        "value6"
+      ]
+    }
   ]
 }
